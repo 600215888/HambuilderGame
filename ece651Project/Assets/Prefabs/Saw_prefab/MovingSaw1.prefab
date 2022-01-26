@@ -103,7 +103,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 068c34cd34b1b4c4fa63c7414b340d01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e056aef66cbb96449d98bb6bcb382d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297808206388021363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b130bf4cd576c2c4d8372467f3d08d15, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e9ad3eea6873654187fc904088e5b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1297808206388021363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3e976b7e65045f458d2192fbe0c466e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0074b9b6a7a006143937eafebe212c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
