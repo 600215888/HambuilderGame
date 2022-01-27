@@ -5,5 +5,5 @@ using UnityEngine;
 public interface Breed
 {
     // Start is called before the first frame update
-    void move(GameObject gameobj);
+    public void move(Enemy enemy, Vector3 startpos, float dist);
 }
