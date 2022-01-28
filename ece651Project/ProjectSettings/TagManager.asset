@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftRight
   - SwayDown
+  - Ketchup
   layers:
   - Default
   - TransparentFX
