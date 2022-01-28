@@ -11,7 +11,7 @@ public class StartMenu : MonoBehaviour
     }
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("StartMenu"); //name of scene to load
+        SceneManager.LoadScene("MainMenu"); //name of scene to load
     }
     public void LoadHelp()
     {
