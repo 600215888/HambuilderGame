@@ -9,4 +9,12 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("StartMenu"); //name of scene to load
+    }
+    public void LoadHelp()
+    {
+        SceneManager.LoadScene("HelpMenu");
+    }
 }
