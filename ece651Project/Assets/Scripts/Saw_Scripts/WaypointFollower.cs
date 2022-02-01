@@ -7,14 +7,14 @@ public class WaypointFollower : MonoBehaviour
 
     [SerializeField] private GameObject[] waypoints;
     private int CurrentWayPoint = 0;
-    private bool direction=true;//true= ++, false=--
+    private bool direction=false;//true= ++, false=--
 
     [SerializeField] private float speed = 2f;
     [SerializeField] private bool cycle = false;
 
     private void Update()
     {
-        Debug.Log(CurrentWayPoint);
+        //Debug.Log(CurrentWayPoint);
         if (cycle)
         {
             if (Vector2.Distance(waypoints[CurrentWayPoint].transform.position, transform.position) < .1f)
