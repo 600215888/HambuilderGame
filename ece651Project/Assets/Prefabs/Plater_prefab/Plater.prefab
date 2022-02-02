@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 5328711857562685675}
   - component: {fileID: 5328711857562685674}
   - component: {fileID: 5328711857562685673}
+  - component: {fileID: 5844634085263754624}
   - component: {fileID: 6625321183950133400}
   - component: {fileID: 6625321183950133403}
   - component: {fileID: 6625321183950133407}
@@ -123,9 +124,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5328711857562685668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2779cba0463ac41b4af98bea29aff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 5328711857370120190}
+  - {fileID: 5328711857741511811}
+  - {fileID: 5328711858790390317}
+  speed: 2
+  cycle: 0
+--- !u!114 &5844634085263754624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328711857562685668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42860774f2646a488df2eecb9158705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
