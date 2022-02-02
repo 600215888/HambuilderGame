@@ -6,6 +6,12 @@ TagManager:
   tags:
   - LeftRight
   - SwayDown
+  - Ketchup
+  - Mustard
+  - Ground
+  - Trap
+  - Stun
+  - MapBorder
   layers:
   - Default
   - TransparentFX
@@ -13,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -40,6 +46,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2640787127
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 2802593871
+    locked: 0
+  - name: Mustard
+    uniqueID: 3676183425
+    locked: 0
+  - name: Player
+    uniqueID: 3659915131
     locked: 0
