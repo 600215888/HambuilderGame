@@ -7,11 +7,42 @@ public class PlayerLife : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
+    [SerializeField] private float timerSpeed = 2f;
+    private float count = 0f;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (anim.GetBool("isP") == true)
+        {
+            count += Time.deltaTime;
+            if (count >= timerSpeed)
+            {
+                count = 0f;
+                anim.SetBool("isP", false);
+                rb.bodyType = RigidbodyType2D.Dynamic;
+            }
+        }
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("MapBorder"))
+        {
+            Die();
+        }
+
+        if (collision.gameObject.CompareTag("SwayDown") || collision.gameObject.CompareTag("LeftRight"))
+        {
+            Die();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,6 +53,7 @@ public class PlayerLife : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Stun"))
         {
+            //Destroy(collision.gameObject);
             Stun();
         }
 
@@ -35,12 +67,9 @@ public class PlayerLife : MonoBehaviour
 
     private void Stun()
     {
+        rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("stun");
-        while (anim.GetCurrentAnimatorStateInfo(0).IsName("stun"))
-        {
-            rb.bodyType = RigidbodyType2D.Static;
-        }
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        anim.SetBool("isP", true);
     }
 
     private void RestartLevel()
