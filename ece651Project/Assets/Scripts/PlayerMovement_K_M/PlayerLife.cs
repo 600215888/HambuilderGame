@@ -9,6 +9,7 @@ public class PlayerLife : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float timerSpeed = 2f;
     private float count = 0f;
+    [SerializeField] private GameObject deathEffect;
 
     private void Start()
     {
@@ -21,6 +22,10 @@ public class PlayerLife : MonoBehaviour
         if (anim.GetBool("isP") == true)
         {
             count += Time.deltaTime;
+            if (GetComponent<PlayerMovement>().IsGrounded() == false)
+            {
+                transform.position += new Vector3(0f, -0.01f, 0f);
+            }
             if (count >= timerSpeed)
             {
                 count = 0f;
@@ -70,6 +75,11 @@ public class PlayerLife : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("stun");
         anim.SetBool("isP", true);
+    }
+
+    private void callDeathFade()
+    {
+        deathEffect.GetComponent<DeathEffect>().startFadeOutAnim = true;
     }
 
     private void RestartLevel()
