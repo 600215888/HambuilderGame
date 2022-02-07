@@ -10399,6 +10399,25 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &269338754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3882745915006681352, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
+  m_PrefabInstance: {fileID: 3882745915275954570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &269338755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269338754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4e2fe5f2d9165458b923d13b966f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelfive: {fileID: 22100000, guid: 21f6c36135c84e545863913918622f05, type: 2}
+  levelone: {fileID: 22100000, guid: caf44fcaf1235534a9dbcfc1a3cba8c6, type: 2}
 --- !u!4 &269338760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3882745915006681346, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
@@ -16869,6 +16888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hamburger
       objectReference: {fileID: 0}
+    - target: {fileID: 3882745915006681353, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fafef132a66bb3246bf1fd45df1b8f13, type: 2}
     - target: {fileID: 3882745915006681359, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
       propertyPath: m_UsedByComposite
       value: 0

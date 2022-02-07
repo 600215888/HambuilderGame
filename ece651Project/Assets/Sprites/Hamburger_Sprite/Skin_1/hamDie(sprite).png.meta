@@ -20,6 +20,15 @@ TextureImporter:
   - first:
       213: 5451455392109428741
     second: hamDie(sprite)_5
+  - first:
+      213: 2672930530231020009
+    second: hamDie(sprite)_6
+  - first:
+      213: -471140124594845400
+    second: hamDie(sprite)_7
+  - first:
+      213: -8434384558416033024
+    second: hamDie(sprite)_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -166,7 +175,7 @@ TextureImporter:
       name: hamDie(sprite)_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 0
         width: 32
         height: 32
@@ -187,7 +196,7 @@ TextureImporter:
       name: hamDie(sprite)_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -208,7 +217,7 @@ TextureImporter:
       name: hamDie(sprite)_4
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 0
         width: 32
         height: 32
@@ -229,7 +238,7 @@ TextureImporter:
       name: hamDie(sprite)_5
       rect:
         serializedVersion: 2
-        x: 224
+        x: 160
         y: 0
         width: 32
         height: 32
@@ -242,6 +251,69 @@ TextureImporter:
       bones: []
       spriteID: 500029bcbc577ab40800000000000000
       internalID: 5451455392109428741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamDie(sprite)_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e967bbc728281520800000000000000
+      internalID: 2672930530231020009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamDie(sprite)_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829471a8d8c2679f0800000000000000
+      internalID: -471140124594845400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hamDie(sprite)_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b82907eeb03fa80800000000000000
+      internalID: -8434384558416033024
       vertices: []
       indices: 
       edges: []
