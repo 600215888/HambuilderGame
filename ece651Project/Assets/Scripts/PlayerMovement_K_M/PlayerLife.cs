@@ -10,6 +10,9 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private float timerSpeed = 2f;
     private float count = 0f;
     [SerializeField] private GameObject deathEffect;
+    [SerializeField] private AudioSource deathsoundEffect;
+    [SerializeField] private AudioSource stunsoundEffect;
+    [SerializeField] private GameObject bgm;
 
     private void Start()
     {
@@ -66,15 +69,23 @@ public class PlayerLife : MonoBehaviour
 
     private void Die()
     {
+        bgm.GetComponent<AudioSource>().Pause();
+        //deathsoundEffect.Play();
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }
 
     private void Stun()
     {
+        stunsoundEffect.Play();
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("stun");
         anim.SetBool("isP", true);
+    }
+
+    private void callDeathSFX()
+    {
+        deathsoundEffect.Play();
     }
 
     private void callDeathFade()

@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float ketchupPushForce = 5f;
     [SerializeField] private float moveSpeedOnMustard = 14f;
 
-
+    [SerializeField] private AudioSource runsoundEffect;
+    [SerializeField] private AudioSource jumpsoundEffect;
 
 
     private enum MovementState { idle, running, jumping, falling }
@@ -30,13 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isOnGround = true;
 
 
-
-
-
-    //int wholeNumber = 16;
-    //float decimalNumber = 4.54f;
-    //string text = "blabla";
-    //bool boolean = false;
 
 
 
@@ -69,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         // if (Input.GetKeyDown("space"))
         if (Input.GetButtonDown("Jump") && (IsGrounded() || isInKetchup))
         {
+            jumpsoundEffect.Play();
             rb.velocity = new Vector3(rb.velocity.x, jumpForce);
         }
 
@@ -183,7 +178,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    private void playRunSound()
+    {
+        runsoundEffect.Play();
+    }
 
 
 
