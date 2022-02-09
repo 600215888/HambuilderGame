@@ -9,15 +9,17 @@ public class Knife : MonoBehaviour
     public float movementSpeed = 3.0f;
     private GameObject knifeobj;
     Vector2 movement = new Vector2();
-    public int rot_angle = -30;
+    public int rot_angle = 0;
     public bool go_back = true;
+    private Vector3 orig_position;
 
     Rigidbody2D rb2D;
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        knifeobj = GameObject.Find("Knife");
+        knifeobj = this.gameObject;
         knifeobj.transform.rotation = Quaternion.Euler(Vector3.forward * (rot_angle));
+        orig_position = knifeobj.transform.position;
     }
 
     private void FixedUpdate()
@@ -56,8 +58,10 @@ public class Knife : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Logic for collision goes here. 
-        //We could probably check the tag of what we've collided with and decide what to do from there.
-        knifeobj.transform.position = new Vector2(0, 4);
+        if (collision.gameObject.tag == "Ground")
+        {
+            knifeobj.transform.position = orig_position;
+        }
     }
 
     // Update is called once per frame
