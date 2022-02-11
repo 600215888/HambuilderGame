@@ -17,4 +17,9 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene("HelpMenu");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
