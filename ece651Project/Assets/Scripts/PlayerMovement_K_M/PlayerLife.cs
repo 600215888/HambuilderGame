@@ -34,6 +34,7 @@ public class PlayerLife : MonoBehaviour
                 count = 0f;
                 anim.SetBool("isP", false);
                 rb.bodyType = RigidbodyType2D.Dynamic;
+                GetComponent<PlayerMovement>().isStatic = false;
             }
         }
     }
@@ -70,8 +71,12 @@ public class PlayerLife : MonoBehaviour
     private void Die()
     {
         bgm.GetComponent<AudioSource>().Pause();
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            GetComponent<PlayerMovement>().isStatic = true;
+        }
         //deathsoundEffect.Play();
-        rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }
 
@@ -79,6 +84,7 @@ public class PlayerLife : MonoBehaviour
     {
         stunsoundEffect.Play();
         rb.bodyType = RigidbodyType2D.Static;
+        GetComponent<PlayerMovement>().isStatic = true;
         anim.SetTrigger("stun");
         anim.SetBool("isP", true);
     }
@@ -96,5 +102,15 @@ public class PlayerLife : MonoBehaviour
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public Animator GetPlayerLifeAnim()
+    {
+        return anim;
+    }
+
+    public void SetPlayerLifeAnim(Animator thisanim)
+    {
+        anim = thisanim;
     }
 }

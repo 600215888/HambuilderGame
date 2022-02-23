@@ -12,6 +12,7 @@ TagManager:
   - Trap
   - Stun
   - MapBorder
+  - DeathEffectCanvas
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelZeroSkinChange : MonoBehaviour
 {
+    [SerializeField] private RuntimeAnimatorController levelzero;
     [SerializeField] private AnimatorOverrideController levelfive;
     [SerializeField] private AnimatorOverrideController levelone;
     [SerializeField] private AnimatorOverrideController leveltwo;
@@ -14,8 +15,8 @@ public class LevelZeroSkinChange : MonoBehaviour
 
     void Start()
     {
-        //controllerArray[0] = levelone;
-        controllerArray = new AnimatorOverrideController[] { levelone, leveltwo, levelthree, levelfour, levelfive };
+        //controllerArray = new AnimatorOverrideController[] { levelone, leveltwo, levelthree, levelfour, levelfive };
+        SetSkinChangeController();
     }
 
     // Update is called once per frame
@@ -47,15 +48,26 @@ public class LevelZeroSkinChange : MonoBehaviour
         }
     }
 
-    private void ChangeCharSkin(int skinIndex)
+    public void ChangeCharSkin(int skinIndex)
     {
         if (skinIndex == 0)
         {
-            GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animation/Hamburger") as RuntimeAnimatorController;
+            //GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animation/Hamburger") as RuntimeAnimatorController;
+            GetComponent<Animator>().runtimeAnimatorController = levelzero as RuntimeAnimatorController;
         }
         else
         {
-            GetComponent<Animator>().runtimeAnimatorController = controllerArray[skinIndex-1] as RuntimeAnimatorController;
+            GetComponent<Animator>().runtimeAnimatorController = GetSkinChangeController(skinIndex) as RuntimeAnimatorController;
         }
+    }
+
+    public AnimatorOverrideController GetSkinChangeController(int skinIndex)
+    {
+        return controllerArray[skinIndex - 1];
+    }
+
+    public void SetSkinChangeController()
+    {
+        controllerArray = new AnimatorOverrideController[] { levelone, leveltwo, levelthree, levelfour, levelfive };
     }
 }
