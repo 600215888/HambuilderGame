@@ -9,7 +9,7 @@ test-job1:
     - echo $Env:Path
     - echo $Env:UserName
     - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -logFile -testResults PlaymodeResults.xml"
-    - dir
+    - dir /ece651Project
     - '[xml]$xml = Get-Content -PATH ./ece651Project/PlaymodeResults.xml'
   artifacts:
     when: always
