@@ -5,6 +5,8 @@ build-job:
 
 test-job1:
   stage: test
+  variables:
+    ErrorActionPreference: Stop
   script:
     - echo $Env:Path
     - echo $Env:UserName
