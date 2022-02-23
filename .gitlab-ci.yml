@@ -11,13 +11,6 @@ test-job1:
     - echo $Env:Path
     - echo $Env:UserName
     - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -logFile -testResults ./PlaymodeResults.xml" -Wait | Out-Default
-    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath . -logFile -testResults ./PlaymodeResults.xml | Out-Default
-
-    - dir ece651Project
-  artifacts:
-    when: always
-    paths:
-      - PlaymodeResults.xml
 
 
 test-job2:
