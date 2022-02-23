@@ -8,8 +8,14 @@ test-job1:
   script:
     - echo $Env:Path
     - echo $Env:UserName
-    - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml"
-    - Start-Process Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml"
+    - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-batchmode -projectPath . -runTests -testPlatform editmode -logFile -testResults ./unit-tests.xml" -Wait | Out-Default
+    - '[xml]$xml = Get-Content -PATH ./unit-tests.xml'
+    - $result = $xml.SelectSingleNode("//test-run.result").InnerText
+    - if ("Passed" -ne $result) { throw }
+  artifacts:
+    when: always
+    paths:
+      - unit-tests.xml
 
 
 test-job2:
