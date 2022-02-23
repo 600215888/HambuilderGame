@@ -1,23 +1,24 @@
-stages:
-  - test
-  - build
-  - deploy
-unit-test:
-  stage: test
-  variables:
-    ErrorActionPreference: Stop
-  script:
-    - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-batchmode -projectPath . -runTests -testPlatform editmode -logFile -testResults unit-tests.xml" -Wait | Out-Default
-    - '[xml]$xml = Get-Content -PATH unit-tests.xml'
-    
-
-unity-build:
+build-job:
   stage: build
-  script: echo 'Building...'
-  tags:
-    - unity
-playstore:
+  script:
+    - echo "Hello, World"
+
+test-job1:
+  stage: test
+  script:
+    - echo $Env:Path
+    - echo $Env:UserName
+    - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml"
+
+
+test-job2:
+  stage: test
+  script:
+    - echo "This job tests something, but takes more time than test-job1."
+    - echo "After the echo commands complete, it runs the sleep command for 20 seconds"
+    - echo "which simulates a test that runs 20 seconds longer than test-job1"
+
+deploy-prod:
   stage: deploy
-  script: echo 'Deploying...'
-  tags:
-    - unity
+  script:
+    - echo "This job deploys something from the branch."
