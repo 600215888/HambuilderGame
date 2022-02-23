@@ -5,13 +5,13 @@ build-job:
 
 test-job1:
   stage: test
+  before_script: $env:Path = $env:Path + ";C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe"
   script:
     - echo $Env:Path
     - echo $Env:UserName
     - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -logFile -testResults ./PlaymodeResults.xml" -Wait | Out-Default
 
     - dir ece651Project
-    - '[xml]$xml = Get-Content -PATH ./PlaymodeResults.xml'
   artifacts:
     when: always
     paths:
