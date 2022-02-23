@@ -28,32 +28,36 @@ public class PlayerMovementTests
         player = GameObject.FindWithTag("Player");
         var script = player.GetComponent<PlayerMovement>();
         anim = player.GetComponent<Animator>();
+        var curloc = player.transform.position;
 
         //test idle
         //script.SetMovementDirX(0f);
         script.SetMovementRb();
         script.SetAnim();
         script.UpdateAnimationState();
-        yield return null;
+        yield return new WaitForFixedUpdate();
         Assert.AreEqual("Ham_Idle", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
 
         //test running
+        script.isStatic = false;
         script.SetMovementDirX(-1f);//toward left
+        script.SetRBvelocity(new Vector2(0f, 0f));
         script.UpdateAnimationState();
-        yield return null;
-        Assert.AreEqual("Ham_Run", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+        Assert.AreEqual(1, anim.GetInteger("state"));
 
+        script.isStatic = false;
         script.SetMovementDirX(1f);//toward right
+        script.SetRBvelocity(new Vector2(0f, 0f));
         script.UpdateAnimationState();
-        yield return null;
-        Assert.AreEqual("Ham_Run", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+        Assert.AreEqual(1, anim.GetInteger("state"));
 
         //test jumping
         script.SetMovementDirX(0f);
         script.SetRBvelocity(new Vector2(0f, 1f));
         script.UpdateAnimationState();
-        yield return null;
-        Assert.AreEqual("Ham_Jump", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+        Assert.AreEqual(2, anim.GetInteger("state"));
+        //yield return null;
+        //Assert.AreEqual("Ham_Jump", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
 
         //test falling
         player.transform.position += Vector3.up * 20;

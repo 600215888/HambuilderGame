@@ -33,7 +33,7 @@ public class PlayerLifeTests
 
         //user story when collide with map border
         player.transform.position = new Vector3(86f, -24f, -1.6f);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         //Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
         Assert.AreEqual("Ham_Die", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
 
