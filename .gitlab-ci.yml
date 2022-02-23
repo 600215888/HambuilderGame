@@ -6,7 +6,7 @@ build-job:
 test-job1:
   stage: test
   script:
-    - Start-Process -ArgumentList Unity.exe -runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml
+    - Start-Process Unity.exe -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml"
 
 test-job2:
   stage: test
