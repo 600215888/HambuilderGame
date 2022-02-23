@@ -66,7 +66,10 @@ public class Knife : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             knifeobj.transform.position = orig_position;
-            soundeffect.Play();
+            if (soundeffect != null)
+            {
+                soundeffect.Play();
+            }
         }
     }
 

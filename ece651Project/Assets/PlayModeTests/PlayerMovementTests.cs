@@ -30,11 +30,11 @@ public class PlayerMovementTests
         anim = player.GetComponent<Animator>();
 
         //test idle
-        script.SetMovementDirX(0f);
+        //script.SetMovementDirX(0f);
         script.SetMovementRb();
         script.SetAnim();
         script.UpdateAnimationState();
-        yield return new WaitForSeconds(0.5f);
+        yield return null;
         Assert.AreEqual("Ham_Idle", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
 
         //test running
