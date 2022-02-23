@@ -8,6 +8,8 @@ test-job1:
   script:
     - echo $Env:Path
     - echo $Env:UserName
+    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml
+
 
 test-job2:
   stage: test
