@@ -6,7 +6,7 @@ build-job:
 test-job1:
   stage: test
   script:
-    - echo %PATH%
+    - echo $Env:Path
 
 test-job2:
   stage: test
