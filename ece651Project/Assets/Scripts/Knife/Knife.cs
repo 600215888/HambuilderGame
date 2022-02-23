@@ -19,7 +19,10 @@ public class Knife : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         knifeobj = this.gameObject;
-        soundeffect.Play();
+        if (soundeffect != null)
+        {
+            soundeffect.Play();
+        }
         knifeobj.transform.rotation = Quaternion.Euler(Vector3.forward * (rot_angle));
         orig_position = knifeobj.transform.position;
     }

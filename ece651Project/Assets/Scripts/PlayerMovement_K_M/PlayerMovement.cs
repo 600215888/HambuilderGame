@@ -9,12 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    public bool isStatic;
 
     [SerializeField] private LayerMask jumpableGround;
 
 
-    private float dirX=0f;
-    [SerializeField] private float moveSpeed=7f;
+    private float dirX = 0f;
+    [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
     [SerializeField] private float ketchupPushForce = 5f;
     [SerializeField] private float moveSpeedOnMustard = 14f;
@@ -33,14 +34,15 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
-    // Start is called before the first frame update
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
+        SetMovementRb();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        SetAnim();
+        //anim = GetComponent<Animator>();
+        isStatic = false;
     }
 
     // Update is called once per frame
@@ -48,45 +50,43 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //float dirX = Input.GetAxis("Horizontal");
-        dirX = Input.GetAxisRaw("Horizontal");
+        SetMovementDirX(Input.GetAxisRaw("Horizontal"));
+        //dirX = Input.GetAxisRaw("Horizontal");
 
-        if (isInMustardState)
+        if (isInMustardState && !isStatic)
         {
-            rb.velocity = new Vector2(dirX * moveSpeedOnMustard, rb.velocity.y);
+            GetMovementRb().velocity = new Vector2(GetMovementDirX() * moveSpeedOnMustard, GetMovementRb().velocity.y);
         }
-        else 
+        else if (!isStatic)
         {
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+            GetMovementRb().velocity = new Vector2(GetMovementDirX() * moveSpeed, GetMovementRb().velocity.y);
         }
 
 
         // if (Input.GetKeyDown("space"))
-        if (Input.GetButtonDown("Jump") && (IsGrounded() || isInKetchup))
+        if (Input.GetButtonDown("Jump") && (IsGrounded() || isInKetchup) && !isStatic)
         {
             jumpsoundEffect.Play();
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+            GetMovementRb().velocity = new Vector3(GetMovementRb().velocity.x, jumpForce);
         }
 
 
 
         UpdateAnimationState();
-
-
-
     }
 
 
-    private void UpdateAnimationState()
+    public void UpdateAnimationState()
     {
         MovementState state;
 
 
-        if (dirX > 0f)
+        if (GetMovementDirX() > 0f)
         {
-            state=MovementState.running;
+            state = MovementState.running;
             sprite.flipX = false;
         }
-        else if (dirX < 0f)
+        else if (GetMovementDirX() < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
@@ -96,18 +96,20 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.idle;
         }
 
-
-        if (rb.velocity.y > .1f)
+        if (!isStatic)
         {
-            state = MovementState.jumping;
-        }
-        else if (rb.velocity.y < -.1f)
-        {
-            state = MovementState.falling;
+            if (GetMovementRb().velocity.y > .1f)
+            {
+                state = MovementState.jumping;
+            }
+            else if (GetMovementRb().velocity.y < -.1f)
+            {
+                state = MovementState.falling;
+            }
         }
 
 
-        anim.SetInteger("state", (int)state);
+        GetAnim().SetInteger("state", (int)state);
     }
 
     public bool IsGrounded()
@@ -118,10 +120,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ketchup"))
+        if (collision.gameObject.CompareTag("Ketchup") && !isStatic)
         {
             isInKetchup = true;
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y + ketchupPushForce);
+            GetMovementRb().velocity = new Vector3(GetMovementRb().velocity.x, GetMovementRb().velocity.y + ketchupPushForce);
         }
 
         if (collision.gameObject.CompareTag("Mustard"))
@@ -129,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
             isOnMustard = true;
             isInMustardState = true;
         }
-        
+
     }
 
 
@@ -183,8 +185,40 @@ public class PlayerMovement : MonoBehaviour
         runsoundEffect.Play();
     }
 
+    public void SetMovementDirX(float thisDirx)
+    {
+        dirX = thisDirx;
+    }
 
 
+    public float GetMovementDirX()
+    {
+        return dirX;
+    }
 
+    public void SetMovementRb()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    public Rigidbody2D GetMovementRb()
+    {
+        return rb;
+    }
+
+    public Animator GetAnim()
+    {
+        return anim;
+    }
+
+    public void SetAnim()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    public void SetRBvelocity(Vector2 input)
+    {
+        GetMovementRb().velocity = input;
+    }
 
 }

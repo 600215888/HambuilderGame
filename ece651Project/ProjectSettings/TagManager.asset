@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LeftRight
+  - SwayDown
+  - Ketchup
+  - Mustard
+  - Ground
+  - Trap
+  - Stun
+  - MapBorder
+  - DeathEffectCanvas
   layers:
   - Default
   - TransparentFX
