@@ -10,8 +10,8 @@ test-job1:
   script:
     - echo $Env:Path
     - echo $Env:UserName
-    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath . -logFile -testResults ./PlaymodeResults.xml" -Wait | Out-Default
-    - dir ece651Project
+    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath . -logFile -testResults PlaymodeResults.xml" -Wait | Out-Default
+
 
 
 
