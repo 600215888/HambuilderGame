@@ -17,8 +17,7 @@ unit-test:
       - unit-tests.xml
     reports:
       junit: unit-tests.xml
-  tags:
-    - unity
+
 unity-build:
   stage: build
   script: echo 'Building...'
