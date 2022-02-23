@@ -8,7 +8,7 @@ test-job1:
   script:
     - echo $Env:Path
     - echo $Env:UserName
-    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml
+    - Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe" -ArgumentList "-runTests -batchmode -testPlatform editmode -projectPath . -testResults PlaymodeResults.xml"
 
 
 test-job2:
