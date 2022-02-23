@@ -11,12 +11,6 @@ unit-test:
     - '[xml]$xml = Get-Content -PATH ./unit-tests.xml'
     - $result = $xml.SelectSingleNode("//test-run.result").InnerText
     - if ("Passed" -ne $result) { throw }
-  artifacts:
-    when: always
-    paths:
-      - unit-tests.xml
-    reports:
-      junit: unit-tests.xml
 
 unity-build:
   stage: build
