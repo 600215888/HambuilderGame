@@ -10,7 +10,7 @@ test-job1:
     - echo $Env:Path
     - echo $Env:UserName
     - dir
-    - echo %Env:UNITY_HOME$
+    - echo %Env:UNITY_HOME%
     - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath ./ece651Project  -logFile -testResults ./PlaymodeResults.xml -Wait | Out-Default
 
 
