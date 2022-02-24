@@ -11,7 +11,7 @@ test-job1:
     - echo $Env:Path
     - echo $Env:UserName
     - dir
-    - Unity.exe -runTests -batchmode -testPlatform playmode -projectPath ./ece651Project  -logFile -testResults ./PlaymodeResults.xml -Wait | Out-Default
+    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath ./ece651Project  -logFile -testResults ./PlaymodeResults.xml -Wait | Out-Default
 
 
 test-job2:
