@@ -12,11 +12,11 @@ EditModetest-job:
   stage: EditTest
   
   script:
-    - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath ./ece651Project  -logFile -testResults ./ece651Project/EditmodeResults.xml -Wait | Out-Default
-    - dir ./ece651Project/logs
+    - cd .\ece651Project\
+    - Unity.exe -runTests -batchmode -testPlatform editmode -logFile -testResults EditmodeResults.xml -Wait | Out-Default
   artifacts:
     paths:
-      - ./ece651Project/EditmodeResults.xml
+      - EditmodeResults.xml
     expire_in: 1 week
 
 PlayModetest-job:
