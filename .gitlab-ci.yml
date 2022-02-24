@@ -5,8 +5,8 @@ build-job:
 
 test-job1:
   stage: test
-  variables:
-    ErrorActionPreference: Stop
+  before_script: 
+    - $env:Path = $env:Path + ";C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor"
   script:
     - echo $Env:Path
     - echo $Env:UserName
