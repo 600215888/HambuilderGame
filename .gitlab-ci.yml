@@ -13,7 +13,7 @@ EditModetest-job:
   
   script:
     - cd .\ece651Project\
-    - Unity.exe -runTests -testPlatform playmode -batchmode -projectPath . -testResults -logFile  EditmodeResults.xml | Out-Default
+    - Unity.exe -runTests -testPlatform editmode -batchmode -projectPath . -testResults -logFile  EditmodeResults.xml | Out-Default
 
 PlayModetest-job:
   stage: PlayTest
