@@ -10,6 +10,7 @@ test-job1:
   script:
     - echo $Env:Path
     - echo $Env:UserName
+    - dir
     - Unity.exe -runTests -batchmode -testPlatform playmode -projectPath . -logFile -testResults ./PlaymodeResults.xml -Wait | Out-Default
     - echo dir
   artifacts:
