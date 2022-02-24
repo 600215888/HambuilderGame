@@ -1,6 +1,7 @@
 stages:
   - build
-  - test
+  - EditTest
+  - PlayTest
 
 build-job:
   stage: build
@@ -8,13 +9,13 @@ build-job:
     - echo "Hello, World"
 
 EditModetest-job:
-  stage: test
+  stage: EditTest
   
   script:
     - Unity.exe -runTests -batchmode -testPlatform editmode -projectPath ./ece651Project  -logFile -testResults ./EditmodeResults.xml -Wait | Out-Default
 
 PlayModetest-job:
-  stage: test
+  stage: PlayTest
   
   script:
     - Unity.exe -runTests -batchmode -testPlatform playmode -projectPath ./ece651Project  -logFile -testResults ./PlaymodeResults.xml -Wait | Out-Default
