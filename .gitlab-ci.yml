@@ -13,7 +13,7 @@ EditModetest-job:
   
   script:
     - cd .\ece651Project\
-    - Unity.exe -runTests -batchmode -testPlatform editmode -logFile -testResults EditmodeResults.xml -Wait | Out-Default
+    - Unity.exe -runTests -batchmode   -testResults EditmodeResults.xml | Out-Default
   artifacts:
     paths:
       - EditmodeResults.xml
