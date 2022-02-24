@@ -12,11 +12,6 @@ test-job1:
     - echo $Env:UserName
     - dir
     - Unity.exe -runTests -batchmode -testPlatform playmode -projectPath ./ece651Project  -logFile -testResults ./PlaymodeResults.xml -Wait | Out-Default
-    - echo dir
-  artifacts:
-    when: always
-    paths:
-      - PlaymodeResults.xml
 
 
 test-job2:
