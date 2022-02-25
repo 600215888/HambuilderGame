@@ -6,7 +6,7 @@ using UnityEngine;
 public class fly : MonoBehaviour
 {
 
-    [SerializeField] private GameObject[] waypoints;
+    [SerializeField] public GameObject[] waypoints;
     //private int CurrentWayPoint = 0;
     //private bool direction = false;//true= ++, false=--
 
