@@ -12,7 +12,7 @@ public class FlyTest
     private GameObject player;
     private GameObject fly0;
     private Animator anim;
-    Vector3 pos, velocity;
+    //Vector3 pos, velocity;
     //private Rigidbody2D rb;
 
 
@@ -36,19 +36,24 @@ public class FlyTest
         
         var script = fly0.GetComponent<fly>();
         
-        //yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
         //yield return new WaitForSeconds(0.2f);
         //yield return new WaitForSeconds(5f);
         
         Assert.IsTrue((script.choose >= 0) && (script.choose <= (script.waypoints.Length - 1)));
+        /*
         yield return new WaitForEndOfFrame();
         pos = fly0.transform.position;
         yield return new WaitForEndOfFrame();
+        */
         if (Vector3.Distance(script.waypoints[script.choose].transform.position, script.transform.position) > .1f) {
+            /*
             velocity = (fly0.transform.position - pos) / Time.deltaTime;
             pos = fly0.transform.position;
             //Assert.AreEqual(velocity, Vector3.MoveTowards(fly0.transform.position, script.waypoints[script.choose].transform.position, Time.deltaTime * 5f)- fly0.transform.position);
-            Assert.IsTrue((velocity.magnitude > 4.9f) && (velocity.magnitude < 5.1f));
+            Assert.IsTrue((velocity.magnitude > 4.9f) && (velocity.magnitude < 5.1f));*/
+            Assert.IsTrue((script.velocity.magnitude > 4.9f) && (script.velocity.magnitude < 5.1f));
+            //Assert.AreEqual(5f, script.velocity.magnitude);
         }
         SceneManager.SetActiveScene(tempTestScene);
         yield return SceneManager.UnloadSceneAsync(sceneToTest);

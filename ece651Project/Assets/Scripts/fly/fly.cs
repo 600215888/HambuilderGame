@@ -13,15 +13,18 @@ public class fly : MonoBehaviour
     [SerializeField] private float speed = 2f;
     //[SerializeField] private bool cycle = false;
     //private bool faceleft = true;
+    public Vector3 velocity,lastpos;
     public int choose;
     void Start()
     {
         choose = Random.Range(0, waypoints.Length);
-
+        lastpos = transform.position;
     }
-    private void Update()
+    private void FixedUpdate()
     {
-
+        //velocity = (transform.position - pos) / Time.deltaTime;
+        velocity = (transform.position - lastpos) / Time.deltaTime;
+        lastpos = transform.position;
         if (Vector2.Distance(waypoints[choose].transform.position, transform.position) < .1f)
         {
             choose = Random.Range(0, waypoints.Length);
