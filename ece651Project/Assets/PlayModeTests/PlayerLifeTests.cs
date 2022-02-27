@@ -68,6 +68,30 @@ public class PlayerLifeTests
 
 
     [UnityTest]
+    public IEnumerator AntDieTest()
+    {
+        yield return SceneManager.LoadSceneAsync(sceneToTest, LoadSceneMode.Additive);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneToTest));
+
+        player = GameObject.FindWithTag("Player");
+        var script = player.GetComponent<PlayerLife>();
+        anim = player.GetComponent<Animator>();
+
+        trap = GameObject.FindGameObjectsWithTag("Ant")[0];
+        Vector3 traploc = trap.transform.position;
+
+        player.transform.position = traploc;
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+        Assert.AreEqual("Ham_Die", anim.GetCurrentAnimatorClipInfo(0)[0].clip.name);
+
+        SceneManager.SetActiveScene(tempTestScene);
+        yield return SceneManager.UnloadSceneAsync(sceneToTest);
+
+    }
+
+
+    [UnityTest]
     public IEnumerator SawydownDieTest()
     {
         yield return SceneManager.LoadSceneAsync(sceneToTest, LoadSceneMode.Additive);
