@@ -15,6 +15,11 @@ EditModetest-job:
     - cd .\ece651Project\
     - Unity.exe -runTests -testPlatform editmode -batchmode -projectPath . -testResults -logFile  EditmodeResults.xml | Out-Default
 
+  artifacts:
+    paths: 
+      - .\ece651Project\EditmodeResults.xml 
+    expire_in: 3 days
+
 PlayModetest-job:
   stage: PlayTest
   
@@ -24,4 +29,4 @@ PlayModetest-job:
   artifacts:
     paths: 
       - .\ece651Project\PlaymodeResults.xml 
-    expire_in: 1 week
+    expire_in: 3 days
