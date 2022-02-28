@@ -6,13 +6,18 @@ stages:
 build-job:
   stage: build
   script:
-    - echo "Not yet implemented"
+    - mkdir .\ece651Project\builds
+    - cd .\ece651Project\
+    - Unity.exe -quit -batchmode -logfile buildLog.xml -executeMethod BuildScript.PerformBuild | Out-Default
+  artifacts:
+    paths:
+      - .\buildLog.xml
+    expire_in: 3 days
 
 EditModetest-job:
   stage: EditTest
   
   script:
-    - cd .\ece651Project\
     - Unity.exe -runTests -testPlatform editmode -batchmode -projectPath . -testResults -logFile  EditmodeResults.xml | Out-Default
 
   artifacts:
