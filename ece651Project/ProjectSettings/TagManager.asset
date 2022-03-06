@@ -18,7 +18,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -48,6 +48,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3220595041
+    locked: 0
+  - name: Saw
+    uniqueID: 59731391
+    locked: 0
+  - name: Ground
+    uniqueID: 3400643153
+    locked: 0
+  - name: Mustard
+    uniqueID: 3319486347
+    locked: 0
+  - name: Ketchup
+    uniqueID: 176404235
+    locked: 0
+  - name: Player
+    uniqueID: 1178700435
+    locked: 0
+  - name: MovingPlatform
+    uniqueID: 3345093493
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
