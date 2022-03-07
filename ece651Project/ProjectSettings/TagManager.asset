@@ -48,6 +48,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 915647475
+    locked: 0
+  - name: Saw
+    uniqueID: 315075345
+    locked: 0
+  - name: Ground
+    uniqueID: 607571745
+    locked: 0
+  - name: Mustard
+    uniqueID: 3639130201
+    locked: 0
+  - name: Ketchup
+    uniqueID: 3757756241
+    locked: 0
+  - name: Player
+    uniqueID: 3814704385
+    locked: 0
+  - name: MovingPlatform
+    uniqueID: 1623491873
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
