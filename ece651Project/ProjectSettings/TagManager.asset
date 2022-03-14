@@ -23,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - JumpableLayer
   - 
   - 
   - 
@@ -48,6 +48,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1483699737
+    locked: 0
+  - name: Saw
+    uniqueID: 590269081
+    locked: 0
+  - name: Ground
+    uniqueID: 939151885
+    locked: 0
+  - name: Mustard
+    uniqueID: 3440165155
+    locked: 0
+  - name: Ketchup
+    uniqueID: 3066149935
+    locked: 0
+  - name: Player
+    uniqueID: 3655037297
+    locked: 0
+  - name: MovingPlatform
+    uniqueID: 2539771657
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
