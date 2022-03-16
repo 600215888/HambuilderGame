@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - LeftRight
+  - SwayDown
+  - Ketchup
+  - Mustard
+  - Ground
+  - Trap
+  - Stun
+  - MapBorder
+  - DeathEffectCanvas
+  - Ant
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Jumpable
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 915647475
+    locked: 0
+  - name: Saw
+    uniqueID: 315075345
+    locked: 0
+  - name: Ground
+    uniqueID: 607571745
+    locked: 0
+  - name: Mustard
+    uniqueID: 3639130201
+    locked: 0
+  - name: Ketchup
+    uniqueID: 3757756241
+    locked: 0
+  - name: Player
+    uniqueID: 3814704385
+    locked: 0
+  - name: MovingPlatform
+    uniqueID: 1623491873
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
