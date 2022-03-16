@@ -63,7 +63,7 @@ public class Knife : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Logic for collision goes here. 
-        if (collision.gameObject.tag == "Ground")
+        if ((collision.gameObject.tag == "Ground") | (collision.gameObject.tag=="MapBorder"))
         {
             knifeobj.transform.position = orig_position;
             if (soundeffect != null)
