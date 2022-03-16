@@ -72930,7 +72930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588282134918222546, guid: 84e2c75f39e99a04a90cb83ab3d2ee0f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8588282134918222549, guid: 84e2c75f39e99a04a90cb83ab3d2ee0f, type: 3}
       propertyPath: audio
@@ -74507,7 +74507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588282134918222546, guid: 84e2c75f39e99a04a90cb83ab3d2ee0f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8588282134918222549, guid: 84e2c75f39e99a04a90cb83ab3d2ee0f, type: 3}
       propertyPath: audio
