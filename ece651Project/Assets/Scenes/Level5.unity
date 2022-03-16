@@ -19740,6 +19740,10 @@ PrefabInstance:
       propertyPath: bgm
       value: 
       objectReference: {fileID: 521169205}
+    - target: {fileID: 3882745915006681347, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1104724385}
     - target: {fileID: 3882745915006681352, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
       propertyPath: m_Name
       value: Hamburger
@@ -21145,6 +21149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d33e7a4ef822af498e77da2e5c31ac7, type: 3}
+--- !u!1 &1104724385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4048904011581430831, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+  m_PrefabInstance: {fileID: 1940398937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1118298441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8822629375237805974, guid: 41d44d3a8e88efe47bbfc56c7163411e, type: 3}
