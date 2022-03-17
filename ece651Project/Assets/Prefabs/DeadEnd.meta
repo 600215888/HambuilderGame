@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ece651Project/Assets/Scripts/DeadEnd.meta
+guid: c6e9ea960dde2304dbc5770e065995a1
+=======
 guid: 4119ef2d06cda7a4d945895df8ebbfcc
+>>>>>>> master:ece651Project/Assets/Prefabs/DeadEnd.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
