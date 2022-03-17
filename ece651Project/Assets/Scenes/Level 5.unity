@@ -19754,7 +19754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3882745915006681357, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
       propertyPath: m_SortingLayerID
-      value: -639929999
+      value: -480262911
       objectReference: {fileID: 0}
     - target: {fileID: 3882745915006681358, guid: 23926c6853d6d2b4ea7b50203e805de1, type: 3}
       propertyPath: jumpableGround.m_Bits
