@@ -11,7 +11,8 @@ public class StartMenu : MonoBehaviour
     }
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu"); //name of scene to load
+        //SceneManager.LoadScene("MainMenuSingleScene"); //name of scene to load
+        SceneManager.LoadScene(0);
     }
     public void LoadHelp()
     {
@@ -19,23 +20,23 @@ public class StartMenu : MonoBehaviour
     }
     public void Level1()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(1); //assuming levels are in build settings as lvl1=1, lvl2=2...
     }
     public void Level2()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene(2);
     }
     public void Level3()
     {
-        SceneManager.LoadScene("Level 3");
+        SceneManager.LoadScene(3);
     }
     public void Level4()
     {
-        SceneManager.LoadScene("Level 4");
+        SceneManager.LoadScene(4);
     }
     public void Level5()
     {
-        SceneManager.LoadScene("Level 5");
+        SceneManager.LoadScene(5);
     }
     public void QuitGame()
     {
