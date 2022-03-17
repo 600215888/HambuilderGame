@@ -6,7 +6,6 @@ stages:
 build-job:
   stage: build
   script:
-    - mkdir .\ece651Project\builds
     - cd .\ece651Project\
     - Unity.exe -quit -batchmode -logfile buildLog.xml -executeMethod BuildScript.PerformBuild | Out-Default
   artifacts:
