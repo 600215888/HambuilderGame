@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
+    [SerializeField] private new GameObject light;
+    [SerializeField] private GameObject player;
     private AudioSource goalReachSound;
     private bool activate;
     
@@ -21,15 +23,29 @@ public class NextLevel : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !activate)
         {
             activate = true;
+            Destroy(GetComponent<SpriteRenderer>());
+            Destroy(light);
             goalReachSound.Play();
+            StartCoroutine(SkinChangeAnim());
             StartCoroutine(GoToNextLevel());
         }
     }
 
 
+    IEnumerator SkinChangeAnim()
+    {
+
+
+        //change skin animation
+        player.GetComponent<Animator>().Play("Ham_Change");
+        yield return new WaitForSeconds(5);
+
+    }
+
+
     IEnumerator GoToNextLevel()
     {
-        
+
         yield return new WaitForSeconds(2);
         if (SceneManager.GetActiveScene().buildIndex == 6)
         {
