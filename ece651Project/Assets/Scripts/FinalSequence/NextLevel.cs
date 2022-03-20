@@ -34,6 +34,7 @@ public class NextLevel : MonoBehaviour
         }
         goalReachSound = GetComponent<AudioSource>();
         activate = false;
+        Debug.Log(GetComponent<Animator>().runtimeAnimatorController.name);
     }
 
 
