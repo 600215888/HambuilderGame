@@ -524,7 +524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -364, y: 108.16}
+  m_AnchoredPosition: {x: -323, y: 108.16}
   m_SizeDelta: {x: 124.29, y: 106.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113146426
@@ -950,7 +950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310.5, y: -131.3}
+  m_AnchoredPosition: {x: -248.17809, y: -131.3}
   m_SizeDelta: {x: 172.46, y: 43.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &365667195
@@ -1354,7 +1354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64, y: -134.6}
+  m_AnchoredPosition: {x: -1.6780815, y: -134.6}
   m_SizeDelta: {x: 185.87, y: 46.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &539412548
@@ -2363,7 +2363,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226799028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -243.32193, y: -47.482037, z: -2451.9395}
+  m_LocalPosition: {x: -181, y: -47.482037, z: -2451.9395}
   m_LocalScale: {x: 27.24377, y: 27.24377, z: 27.24377}
   m_Children: []
   m_Father: {fileID: 307355011}
@@ -2524,7 +2524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354215307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 156.10681, y: -87.095604, z: -2451.9395}
+  m_LocalPosition: {x: 218.42873, y: -87.095604, z: -2451.9395}
   m_LocalScale: {x: 75.99744, y: 67.5941, z: 91.839806}
   m_Children: []
   m_Father: {fileID: 307355011}
@@ -3046,7 +3046,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202.4, y: -134.6}
+  m_AnchoredPosition: {x: 264.72192, y: -134.6}
   m_SizeDelta: {x: 185.87, y: 46.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1636312896
@@ -3992,7 +3992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7274739979694740492, guid: 5d33e7a4ef822af498e77da2e5c31ac7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -345
+      value: -323
       objectReference: {fileID: 0}
     - target: {fileID: 7274739979694740492, guid: 5d33e7a4ef822af498e77da2e5c31ac7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4323,7 +4323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7274739979694740492, guid: 5d33e7a4ef822af498e77da2e5c31ac7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 348
+      value: 326
       objectReference: {fileID: 0}
     - target: {fileID: 7274739979694740492, guid: 5d33e7a4ef822af498e77da2e5c31ac7, type: 3}
       propertyPath: m_LocalPosition.y
