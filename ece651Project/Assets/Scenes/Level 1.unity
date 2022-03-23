@@ -81946,6 +81946,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2010271369, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+      propertyPath: m_Text
+      value: fdjkhdskjhf
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010271369, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010271369, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010271370, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 534073622483561606, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4048904011581430826, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
       propertyPath: m_RootOrder
       value: 5
