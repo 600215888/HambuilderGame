@@ -22,7 +22,15 @@ public class LevelSkin : MonoBehaviour
         anim = GetComponent<Animator>();
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SetSkinChangeController();
-        GetComponent<Animator>().runtimeAnimatorController = GetSkinChangeController(sceneIndex-1) as RuntimeAnimatorController;
+        if (sceneIndex == 7 || sceneIndex == 8)
+        {
+            GetComponent<Animator>().runtimeAnimatorController = levelzero as RuntimeAnimatorController;
+        }
+        else
+        {
+            GetComponent<Animator>().runtimeAnimatorController = GetSkinChangeController(sceneIndex - 1) as RuntimeAnimatorController;
+        }
+        
     }
 
 
