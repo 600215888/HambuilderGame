@@ -79,7 +79,7 @@ public class NextLevel : MonoBehaviour
         yield return new WaitForSeconds(2);
         if (SceneManager.GetActiveScene().buildIndex == 6)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(7);
         }
         else
         {
