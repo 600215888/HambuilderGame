@@ -68040,6 +68040,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1510863887512625428, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510863887512625428, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -115
+      objectReference: {fileID: 0}
     - target: {fileID: 7229641483180256199, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
       propertyPath: m_Name
       value: QuestionMark_Top
@@ -68126,6 +68134,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229641483180256200, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229641483222045543, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -75648,6 +75660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathEffectCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5725457489954617418, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14.232544
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 748b044470ad8694498c3a2dcf2d11df, type: 3}
 --- !u!1001 &1533542101
@@ -79204,6 +79220,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1510863887512625428, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510863887512625428, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -114
+      objectReference: {fileID: 0}
     - target: {fileID: 7229641483180256199, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
       propertyPath: m_Name
       value: QuestionMark_Bottom
@@ -79290,6 +79314,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229641483180256200, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229641483222045543, guid: f124a3fce1507f7449e628e7c7ef183d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
