@@ -154,7 +154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hmmm, seems to be a dead end... May be I should explore this map more...
+  m_Text: Hmmm, seems to be a dead end... Maybe I should explore this map more...
 --- !u!1 &7229641483180256199
 GameObject:
   m_ObjectHideFlags: 0
