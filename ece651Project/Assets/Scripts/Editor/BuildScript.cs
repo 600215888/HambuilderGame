@@ -6,7 +6,7 @@ public class BuildScript : MonoBehaviour
     public static void PerformBuild()
     {
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
-        buildPlayerOptions.scenes = new[] { "Assets/Scenes/Level 4.unity" };
+        buildPlayerOptions.scenes = new[] {"Assets/Scenes/Level 1.unity","Assets/Scenes/Level 2.unity","Assets/Scenes/Level 3.unity","Assets/Scenes/Level 4.unity","Assets/Scenes/Level 5.unity"};
         buildPlayerOptions.locationPathName = "./Builds/hamburgerx64.exe";
         buildPlayerOptions.target = BuildTarget.StandaloneWindows64;
         buildPlayerOptions.options = BuildOptions.Development;
