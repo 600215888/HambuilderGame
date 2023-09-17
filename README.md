@@ -1,6 +1,6 @@
 # Hambuilder - Build Your Burger Adventure
 
-![Hambuilder Logo](.readmeImages/hamBasic.png)
+![Hambuilder Logo](./readmeImages/hamBasic.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
