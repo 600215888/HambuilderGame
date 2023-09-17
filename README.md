@@ -37,11 +37,11 @@ Hambuilder is a 2D platformer game where players must navigate through various l
 
 ### Main Menu
 
-![Main Menu](./readmeImages/menu.png)
+![Main Menu](./readmeImages/menu.PNG)
 
 ### Level 3
 
-![Level 3](./readmeImages/level_3.png)
+![Level 3](./readmeImages/level_3.PNG)
 
 ## Sharing
 
